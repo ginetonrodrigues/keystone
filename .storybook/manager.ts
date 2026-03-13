@@ -5,7 +5,7 @@ const keystoneTheme = create({
   base: "light",
   brandTitle: "Keystone Design System",
   brandUrl: "/",
-  brandImage: "/keystone-logo.svg",
+  brandImage: "./keystone-logo.svg",
   colorPrimary: "#14dd3e",
   colorSecondary: "#10b132",
   appBg: "#f8fafb",

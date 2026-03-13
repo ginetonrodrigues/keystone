@@ -7,7 +7,7 @@ export const IntroductionDoc = () => {
   const t = useT();
   return (
     <div style={{ fontFamily: "Inter, -apple-system, sans-serif", maxWidth: "760px" }}>
-      <img src="/keystone-logo.svg" alt="Keystone Design System" style={{ height: "48px", width: "auto", marginBottom: "24px" }} />
+      <img src="./keystone-logo.svg" alt="Keystone Design System" style={{ height: "48px", width: "auto", marginBottom: "24px" }} />
 
       <p style={{ fontSize: "16px", color: "#535862", lineHeight: "26px", margin: "0 0 32px 0", fontFamily: FONT_BODY }}>
         {t("introWelcome").replace(/\*\*(.*?)\*\*/g, "$1").replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")}
