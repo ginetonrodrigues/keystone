@@ -315,6 +315,8 @@ const translations = {
   iconsDownloadSvg: { pt: "Baixar SVG", es: "Descargar SVG", en: "Download SVG" },
   iconsDownloadPng: { pt: "Baixar PNG", es: "Descargar PNG", en: "Download PNG" },
   iconsAvailable: { pt: "ícones disponíveis", es: "iconos disponibles", en: "icons available" },
+  iconsCount: { pt: "ícones", es: "iconos", en: "icons" },
+  iconsNoResults: { pt: "Nenhum ícone encontrado.", es: "Ningún icono encontrado.", en: "No icons found." },
 
   // Typography
   typographyTitle: { pt: "Tipografia", es: "Tipografía", en: "Typography" },
