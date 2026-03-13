@@ -309,6 +309,12 @@ const translations = {
   iconsColor: { pt: "Cor", es: "Color", en: "Color" },
   iconsCopyImport: { pt: "Copiar import", es: "Copiar import", en: "Copy import" },
   iconsCopied: { pt: "Copiado!", es: "¡Copiado!", en: "Copied!" },
+  iconsSearchPlaceholder: { pt: "Buscar", es: "Buscar", en: "Search" },
+  iconsSearchShortcut: { pt: "⌘K", es: "⌘K", en: "⌘K" },
+  iconsCopySvg: { pt: "Copiar SVG", es: "Copiar SVG", en: "Copy SVG" },
+  iconsDownloadSvg: { pt: "Baixar SVG", es: "Descargar SVG", en: "Download SVG" },
+  iconsDownloadPng: { pt: "Baixar PNG", es: "Descargar PNG", en: "Download PNG" },
+  iconsAvailable: { pt: "ícones disponíveis", es: "iconos disponibles", en: "icons available" },
 
   // Typography
   typographyTitle: { pt: "Tipografia", es: "Tipografía", en: "Typography" },
