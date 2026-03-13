@@ -251,6 +251,65 @@ const translations = {
     en: "Some elements, such as input fields and buttons, require a shadow and a focus ring. Currently, Figma doesn't support adding multiple effects styles to elements. As a workaround, these focus rings are combined with shadow styles.",
   },
 
+  // Color Tokens
+  ctTitle: { pt: "Tokens de Cor", es: "Tokens de Color", en: "Color Tokens" },
+  ctBreadcrumb: {
+    pt: "Fundamentos -> Tokens de Cor",
+    es: "Fundamentos -> Tokens de Color",
+    en: "Foundations -> Color Tokens",
+  },
+  ctDesc: {
+    pt: "Tokens semânticos de cor derivados das cores primárias (Untitled UI). Use var(--nome-do-token) no código para manter consistência e theming.",
+    es: "Tokens semánticos de color derivados de los colores primarios (Untitled UI). Use var(--nombre-del-token) en el código para mantener consistencia y theming.",
+    en: "Semantic color tokens derived from primary colors (Untitled UI). Use var(--token-name) in code for consistency and theming.",
+  },
+  ctIntroPrimitives: {
+    pt: "As cores primárias (root) — gray, brand, error, success, etc. — estão em {{LINK}}. Aqui estão os tokens semânticos que referenciam essas primitivas.",
+    es: "Los colores primarios (root) — gray, brand, error, success, etc. — están en {{LINK}}. Aquí están los tokens semánticos que referencian esas primitivas.",
+    en: "Primary (root) colors — gray, brand, error, success, etc. — are in {{LINK}}. Here are the semantic tokens that reference those primitives.",
+  },
+  ctIntroConsume: {
+    pt: "No código, use sempre var(--nome-do-token) em vez do hex da primitiva. Assim o tema e o dark mode continuam corretos.",
+    es: "En el código, use siempre var(--nombre-del-token) en lugar del hex de la primitiva. Así el tema y el modo oscuro se mantienen correctos.",
+    en: "In code, always use var(--token-name) instead of the primitive hex. This keeps theming and dark mode working correctly.",
+  },
+  ctHowItWorks: {
+    pt: "Cada token aponta para uma cor primária (ex.: gray-900, brand-600). Ao alterar o tema, apenas as raízes precisam ser atualizadas.",
+    es: "Cada token apunta a un color primario (ej. gray-900, brand-600). Al cambiar el tema, solo las raíces deben actualizarse.",
+    en: "Each token points to a primary color (e.g. gray-900, brand-600). When changing theme, only the roots need to be updated.",
+  },
+  ctTextColors: { pt: "Cores de texto", es: "Colores de texto", en: "Text colors" },
+  ctBgColors: { pt: "Cores de fundo", es: "Colores de fondo", en: "Background colors" },
+  ctBorderColors: { pt: "Cores de borda", es: "Colores de borde", en: "Border colors" },
+  ctFgColors: {
+    pt: "Foreground (ícones, elementos de UI)",
+    es: "Foreground (iconos, elementos de UI)",
+    en: "Foreground (icons, UI elements)",
+  },
+  ctComponentColors: {
+    pt: "Cores por componente",
+    es: "Colores por componente",
+    en: "Component-specific colors",
+  },
+  ctAliasesNote: {
+    pt: "O tema também expõe aliases (--text-color-*, --background-color-*, --border-color-*, --ring-color-*, --outline-color-*) que apontam para estes tokens.",
+    es: "El tema también expone alias (--text-color-*, --background-color-*, etc.) que apuntan a estos tokens.",
+    en: "The theme also exposes aliases (--text-color-*, --background-color-*, etc.) that point to these tokens.",
+  },
+
+  // Icons
+  iconsTitle: { pt: "Ícones", es: "Iconos", en: "Icons" },
+  iconsBreadcrumb: { pt: "Fundamentos -> Ícones", es: "Fundamentos -> Iconos", en: "Foundations -> Icons" },
+  iconsDesc: {
+    pt: "Biblioteca de ícones Untitled UI. Use tamanho e cor consistentes com o design system.",
+    es: "Biblioteca de iconos Untitled UI. Use tamaño y color consistentes con el sistema de diseño.",
+    en: "Untitled UI icon library. Use size and color consistent with the design system.",
+  },
+  iconsSize: { pt: "Tamanho", es: "Tamaño", en: "Size" },
+  iconsColor: { pt: "Cor", es: "Color", en: "Color" },
+  iconsCopyImport: { pt: "Copiar import", es: "Copiar import", en: "Copy import" },
+  iconsCopied: { pt: "Copiado!", es: "¡Copiado!", en: "Copied!" },
+
   // Typography
   typographyTitle: { pt: "Tipografia", es: "Tipografía", en: "Typography" },
   typographyBreadcrumb: { pt: "Fundamentos -> Tipografia", es: "Fundamentos -> Tipografía", en: "Foundations -> Typography" },
@@ -281,6 +340,16 @@ const translations = {
     pt: "Nosso design system utiliza um conjunto intencional de estilos de cores como ponto de partida perfeito para qualquer marca ou projeto. Quando se trata de cor, o contraste é fundamental para garantir que o texto seja legível. Adicionamos taxas de contraste WCAG 2.2 ao nosso sistema de cores para que você possa garantir que está projetando com acessibilidade em mente.",
     es: "Nuestro sistema de diseño utiliza un conjunto intencional de estilos de color como el punto de partida perfecto para cualquier marca o proyecto. Cuando se trata de color, el contraste es fundamental para garantizar que el texto sea legible. Agregamos tasas de contraste WCAG 2.2 a nuestro sistema de colores para que pueda asegurarse de diseñar con accesibilidad en mente.",
     en: "Our design system leverages a purposeful set of color styles as the perfect starting point for any brand or project. When it comes to color, contrast is critical for ensuring text is legible. We've added WCAG 2.2 contrast ratios to our color system so you can make sure you're designing with accessibility in mind.",
+  },
+  colorsSeeTokensIntro: {
+    pt: "Para variáveis semânticas que consomem estas cores (tokens de texto, fundo, borda, ícones e componentes), veja ",
+    es: "Para variables semánticas que consumen estos colores (tokens de texto, fondo, borde, iconos y componentes), consulte ",
+    en: "For semantic variables that consume these colors (text, background, border, icon and component tokens), see ",
+  },
+  colorsSeeTokensLink: {
+    pt: "Tokens de Cor",
+    es: "Tokens de color",
+    en: "Color Tokens",
   },
   base: { pt: "Base", es: "Base", en: "Base" },
   baseDesc: {

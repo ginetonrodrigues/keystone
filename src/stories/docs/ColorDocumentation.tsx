@@ -415,6 +415,27 @@ export const ColorDocumentation = () => {
       <SwatchRow scale={orangeDarkScale} description={t("orangeDarkDesc")} />
       <SwatchRow scale={purpleScale} />
 
+      <div
+        style={{
+          marginTop: "24px",
+          padding: "16px 20px",
+          background: "#f6fef8",
+          border: "1px solid #e4fbe9",
+          borderRadius: "12px",
+        }}
+      >
+        <p style={{ fontSize: "13px", color: "#181d27", margin: 0, lineHeight: "20px", fontFamily: FONT_BODY }}>
+          {t("colorsSeeTokensIntro")}
+          <a
+            href="?path=/docs/foundations-color-tokens--docs"
+            style={{ color: "#10b132", fontWeight: 600, textDecoration: "none" }}
+          >
+            {t("colorsSeeTokensLink")}
+          </a>
+          .
+        </p>
+      </div>
+
       <Footer />
     </div>
   );
