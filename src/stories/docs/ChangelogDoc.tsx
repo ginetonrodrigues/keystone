@@ -1,44 +1,33 @@
+import { useState, useEffect } from "react";
 import { DocPage, PageHeader, PageFooter } from "./PageLayout";
-import { useT } from "./i18n";
+import { useT, useLocale } from "./i18n";
 
 const FONT_DISPLAY = "'Plus Jakarta Sans', -apple-system, sans-serif";
 const FONT_BODY = "'Inter', -apple-system, sans-serif";
 
 type ChangeType = "added" | "changed" | "fixed" | "removed";
 
-interface ChangeEntry {
-  type: ChangeType;
-  key: string;
+interface LocaleText {
+  pt: string;
+  es: string;
+  en: string;
 }
 
-interface VersionEntry {
+interface LocaleList {
+  pt: string[];
+  es: string[];
+  en: string[];
+}
+
+interface VersionData {
   version: string;
   date: string;
-  titleKey?: string;
-  changes: ChangeEntry[];
+  title?: LocaleText;
+  added?: LocaleList;
+  changed?: LocaleList;
+  fixed?: LocaleList;
+  removed?: LocaleList;
 }
-
-const versions: VersionEntry[] = [
-  {
-    version: "1.0.0",
-    date: "2026-03-12",
-    titleKey: "changelogInitialRelease",
-    changes: [
-      { type: "added", key: "cl100_added1" },
-      { type: "added", key: "cl100_added2" },
-      { type: "added", key: "cl100_added3" },
-      { type: "added", key: "cl100_added4" },
-      { type: "added", key: "cl100_added5" },
-      { type: "added", key: "cl100_added6" },
-      { type: "added", key: "cl100_added7" },
-      { type: "added", key: "cl100_added8" },
-      { type: "added", key: "cl100_added9" },
-      { type: "added", key: "cl100_added10" },
-      { type: "changed", key: "cl100_changed1" },
-      { type: "changed", key: "cl100_changed2" },
-    ],
-  },
-];
 
 const typeConfig: Record<ChangeType, { bg: string; color: string; border: string }> = {
   added: { bg: "#e4fbe9", color: "#0c8525", border: "#d0f8d8" },
@@ -72,6 +61,19 @@ const Badge = ({ type, label }: { type: ChangeType; label: string }) => {
 
 export const ChangelogDoc = () => {
   const t = useT();
+  const locale = useLocale();
+  const [versions, setVersions] = useState<VersionData[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("./changelog.json")
+      .then((r) => r.json())
+      .then((data) => {
+        setVersions(data);
+        setLoading(false);
+      })
+      .catch(() => setLoading(false));
+  }, []);
 
   const typeLabels: Record<ChangeType, string> = {
     added: t("changelogAdded"),
@@ -89,12 +91,11 @@ export const ChangelogDoc = () => {
         resources={false}
       />
 
-      <div style={{ display: "flex", flexDirection: "column", gap: "48px", marginTop: "48px" }}>
-        {versions.map((v) => {
-          const grouped: Record<ChangeType, ChangeEntry[]> = { added: [], changed: [], fixed: [], removed: [] };
-          v.changes.forEach((c) => grouped[c.type].push(c));
-
-          return (
+      {loading ? (
+        <p style={{ color: "#717680", fontFamily: FONT_BODY }}>...</p>
+      ) : (
+        <div style={{ display: "flex", flexDirection: "column", gap: "48px", marginTop: "48px" }}>
+          {versions.map((v) => (
             <div key={v.version} style={{ position: "relative" }}>
               {/* Version header */}
               <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "24px" }}>
@@ -115,9 +116,9 @@ export const ChangelogDoc = () => {
                 <span style={{ fontSize: "14px", color: "#717680", fontFamily: FONT_BODY }}>
                   {v.date}
                 </span>
-                {v.titleKey && (
+                {v.title && (
                   <span style={{ fontSize: "14px", color: "#181d27", fontWeight: 500, fontFamily: FONT_BODY }}>
-                    — {t(v.titleKey as any)}
+                    — {v.title[locale]}
                   </span>
                 )}
               </div>
@@ -125,8 +126,8 @@ export const ChangelogDoc = () => {
               {/* Changes by type */}
               <div style={{ display: "flex", flexDirection: "column", gap: "20px", paddingLeft: "8px" }}>
                 {(["added", "changed", "fixed", "removed"] as ChangeType[]).map((type) => {
-                  const items = grouped[type];
-                  if (items.length === 0) return null;
+                  const items = v[type]?.[locale];
+                  if (!items || items.length === 0) return null;
                   return (
                     <div key={type}>
                       <div style={{ marginBottom: "10px" }}>
@@ -141,9 +142,9 @@ export const ChangelogDoc = () => {
                           gap: "6px",
                         }}
                       >
-                        {items.map((item) => (
+                        {items.map((text, i) => (
                           <li
-                            key={item.key}
+                            key={i}
                             style={{
                               fontSize: "14px",
                               color: "#414651",
@@ -151,7 +152,7 @@ export const ChangelogDoc = () => {
                               fontFamily: FONT_BODY,
                             }}
                           >
-                            {t(item.key as any)}
+                            {text}
                           </li>
                         ))}
                       </ul>
@@ -163,9 +164,9 @@ export const ChangelogDoc = () => {
               {/* Divider */}
               <div style={{ borderBottom: "1px solid #e9eaeb", marginTop: "32px" }} />
             </div>
-          );
-        })}
-      </div>
+          ))}
+        </div>
+      )}
 
       <PageFooter />
     </DocPage>
