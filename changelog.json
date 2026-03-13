@@ -1,0 +1,63 @@
+[
+  {
+    "version": "1.0.0",
+    "date": "2026-03-12",
+    "title": {
+      "pt": "Lançamento inicial",
+      "es": "Lanzamiento inicial",
+      "en": "Initial release"
+    },
+    "added": {
+      "pt": [
+        "Documentação completa do Design System publicada no Storybook",
+        "Página de introdução com visão geral da arquitetura e princípios de design",
+        "Documentação de Design Tokens: espaçamento, raio, sombras, breakpoints",
+        "Paleta de cores completa com 12 tons de marca (brand) e cores semânticas",
+        "Documentação de tipografia com escala de tipos usando Plus Jakarta Sans e Inter",
+        "Primitivos de espaçamento, raio, grid layouts e estilos de efeito",
+        "Anéis de foco e documentação de sombras com exemplos visuais",
+        "Internacionalização (i18n) com suporte a Português, Espanhol e Inglês",
+        "Seletor de idioma integrado na toolbar do Storybook",
+        "Página de Changelog para rastreamento de versões"
+      ],
+      "es": [
+        "Documentación completa del Design System publicada en Storybook",
+        "Página de introducción con visión general de la arquitectura y principios de diseño",
+        "Documentación de Design Tokens: espaciado, radio, sombras, breakpoints",
+        "Paleta de colores completa con 12 tonos de marca (brand) y colores semánticos",
+        "Documentación de tipografía con escala de tipos usando Plus Jakarta Sans e Inter",
+        "Primitivos de espaciado, radio, grid layouts y estilos de efecto",
+        "Anillos de enfoque y documentación de sombras con ejemplos visuales",
+        "Internacionalización (i18n) con soporte para Portugués, Español e Inglés",
+        "Selector de idioma integrado en la toolbar de Storybook",
+        "Página de Changelog para seguimiento de versiones"
+      ],
+      "en": [
+        "Complete Design System documentation published on Storybook",
+        "Introduction page with architecture overview and design principles",
+        "Design Tokens documentation: spacing, radius, shadows, breakpoints",
+        "Complete color palette with 12 brand shades and semantic colors",
+        "Typography documentation with type scale using Plus Jakarta Sans and Inter",
+        "Spacing primitives, radius, grid layouts, and effect styles",
+        "Focus rings and shadows documentation with visual examples",
+        "Internationalization (i18n) with Portuguese, Spanish, and English support",
+        "Language selector integrated in the Storybook toolbar",
+        "Changelog page for version tracking"
+      ]
+    },
+    "changed": {
+      "pt": [
+        "Paleta de brand personalizada com 12 tons de verde (50–950)",
+        "Fonte de títulos atualizada para Plus Jakarta Sans (anteriormente Inter)"
+      ],
+      "es": [
+        "Paleta de marca personalizada con 12 tonos de verde (50–950)",
+        "Fuente de títulos actualizada a Plus Jakarta Sans (anteriormente Inter)"
+      ],
+      "en": [
+        "Custom brand palette with 12 green shades (50–950)",
+        "Heading font updated to Plus Jakarta Sans (previously Inter)"
+      ]
+    }
+  }
+]

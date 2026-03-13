@@ -1,0 +1,43 @@
+import{s as e}from"./iframe-Ba5HxN0B.js";import{t}from"./jsx-runtime-D1h9fths.js";import{t as n}from"./react-DMg-8qcY.js";import"./react-dom-DeXBWSIc.js";import{t as r}from"./HelpCircle-DieOedrq.js";import{t as i}from"./InfoCircle-CkD9sg_6.js";import{n as a,t as o}from"./cx-DD3W-KYS.js";import{n as s,t as c}from"./tooltip-Dbm3s6PK.js";import{a as l,n as u,o as d,r as f,t as p}from"./label-WflXO1O7.js";var m=e(n(),1),h=t(),g=({ref:e,tooltip:t,shortcut:n,groupRef:u,size:f=`sm`,isInvalid:p,isDisabled:g,icon:v,placeholder:y,wrapperClassName:b,tooltipClassName:x,inputClassName:S,iconClassName:C,isRequired:w,...T})=>{let E=t||p,D=v,O=(0,m.useContext)(_),k=O?.size||f,A=a({sm:{root:o(`px-3 py-2`,E&&`pr-9`,D&&`pl-10`),iconLeading:`left-3`,iconTrailing:`right-3`,shortcut:`pr-2.5`},md:{root:o(`px-3.5 py-2.5`,E&&`pr-9.5`,D&&`pl-10.5`),iconLeading:`left-3.5`,iconTrailing:`right-3.5`,shortcut:`pr-3`}});return(0,h.jsxs)(d,{isDisabled:g,isInvalid:p,ref:u,className:({isFocusWithin:e,isDisabled:t,isInvalid:n})=>o(`relative flex w-full flex-row place-content-center place-items-center rounded-lg bg-primary shadow-xs ring-1 ring-primary transition-shadow duration-100 ease-linear ring-inset`,e&&!t&&`ring-2 ring-brand`,t&&`cursor-not-allowed bg-disabled_subtle ring-disabled`,`group-disabled:cursor-not-allowed group-disabled:bg-disabled_subtle group-disabled:ring-disabled`,n&&`ring-error_subtle`,`group-invalid:ring-error_subtle`,n&&e&&`ring-2 ring-error`,e&&`group-invalid:ring-2 group-invalid:ring-error`,O?.wrapperClassName,b),children:[v&&(0,h.jsx)(v,{className:o(`pointer-events-none absolute size-5 text-fg-quaternary`,g&&`text-fg-disabled`,A[k].iconLeading,O?.iconClassName,C)}),(0,h.jsx)(l,{...T,ref:e,placeholder:y,className:o(`m-0 w-full bg-transparent text-md text-primary ring-0 outline-hidden placeholder:text-placeholder autofill:rounded-lg autofill:text-primary`,g&&`cursor-not-allowed text-disabled`,A[k].root,O?.inputClassName,S)}),t&&!p&&(0,h.jsx)(c,{title:t,placement:`top`,children:(0,h.jsx)(s,{className:o(`absolute cursor-pointer text-fg-quaternary transition duration-200 hover:text-fg-quaternary_hover focus:text-fg-quaternary_hover`,A[k].iconTrailing,O?.tooltipClassName,x),children:(0,h.jsx)(r,{className:`size-4`})})}),p&&(0,h.jsx)(i,{className:o(`pointer-events-none absolute size-4 text-fg-error-secondary`,A[k].iconTrailing,O?.tooltipClassName,x)}),n&&(0,h.jsx)(`div`,{className:o(`pointer-events-none absolute inset-y-0.5 right-0.5 z-10 flex items-center rounded-r-[inherit] bg-linear-to-r from-transparent to-bg-primary to-40% pl-8`,A[k].shortcut),children:(0,h.jsx)(`span`,{className:o(`pointer-events-none rounded px-1 py-px text-xs font-medium text-quaternary ring-1 ring-secondary select-none ring-inset`,g&&`bg-transparent text-disabled`),"aria-hidden":`true`,children:typeof n==`string`?n:`⌘K`})})]})};g.displayName=`InputBase`;var _=(0,m.createContext)({}),v=({className:e,...t})=>(0,h.jsx)(_.Provider,{value:t,children:(0,h.jsx)(f,{...t,"data-input-wrapper":!0,className:t=>o(`group flex h-max w-full flex-col items-start justify-start gap-1.5`,typeof e==`function`?e(t):e)})});v.displayName=`TextField`;var y=({size:e=`sm`,placeholder:t,icon:n,label:r,hint:i,shortcut:a,hideRequiredIndicator:o,className:s,ref:c,groupRef:l,tooltip:d,iconClassName:f,inputClassName:m,wrapperClassName:_,tooltipClassName:y,...b})=>(0,h.jsx)(v,{"aria-label":r?void 0:t,...b,className:s,children:({isRequired:s,isInvalid:v})=>(0,h.jsxs)(h.Fragment,{children:[r&&(0,h.jsx)(p,{isRequired:o?!o:s,children:r}),(0,h.jsx)(g,{ref:c,groupRef:l,size:e,placeholder:t,icon:n,shortcut:a,iconClassName:f,inputClassName:m,wrapperClassName:_,tooltipClassName:y,tooltip:d}),i&&(0,h.jsx)(u,{isInvalid:v,children:i})]})});y.displayName=`Input`,g.__docgenInfo={description:``,methods:[],displayName:`InputBase`,props:{size:{defaultValue:{value:`"sm"`,computed:!1},required:!1}}},v.__docgenInfo={description:``,methods:[],displayName:`TextField`,props:{label:{required:!1,tsType:{name:`string`},description:`Label text for the input`},hint:{required:!1,tsType:{name:`ReactNode`},description:`Helper text displayed below the input`},ref:{required:!1,tsType:{name:`Ref`,elements:[{name:`HTMLDivElement`}],raw:`Ref<HTMLDivElement>`},description:``}},composes:[`AriaTextFieldProps`,`Pick`]},y.__docgenInfo={description:``,methods:[],displayName:`Input`,props:{label:{required:!1,tsType:{name:`string`},description:`Label text for the input`},hint:{required:!1,tsType:{name:`ReactNode`},description:`Helper text displayed below the input`},ref:{required:!1,tsType:{name:`Ref`,elements:[{name:`HTMLInputElement`}],raw:`Ref<HTMLInputElement>`},description:``},tooltip:{required:!1,tsType:{name:`string`},description:`Tooltip message on hover.`},size:{required:!1,tsType:{name:`union`,raw:`"sm" | "md"`,elements:[{name:`literal`,value:`"sm"`},{name:`literal`,value:`"md"`}]},description:`Input size.
+@default "sm"`,defaultValue:{value:`"sm"`,computed:!1}},placeholder:{required:!1,tsType:{name:`string`},description:`Placeholder text.`},iconClassName:{required:!1,tsType:{name:`string`},description:`Class name for the icon.`},inputClassName:{required:!1,tsType:{name:`string`},description:`Class name for the input.`},wrapperClassName:{required:!1,tsType:{name:`string`},description:`Class name for the input wrapper.`},tooltipClassName:{required:!1,tsType:{name:`string`},description:`Class name for the tooltip.`},shortcut:{required:!1,tsType:{name:`union`,raw:`string | boolean`,elements:[{name:`string`},{name:`boolean`}]},description:`Keyboard shortcut to display.`},groupRef:{required:!1,tsType:{name:`Ref`,elements:[{name:`HTMLDivElement`}],raw:`Ref<HTMLDivElement>`},description:``},icon:{required:!1,tsType:{name:`ComponentType`,elements:[{name:`HTMLAttributes`,elements:[{name:`HTMLOrSVGElement`}],raw:`HTMLAttributes<HTMLOrSVGElement>`}],raw:`ComponentType<HTMLAttributes<HTMLOrSVGElement>>`},description:`Icon component to display on the left side of the input.`},hideRequiredIndicator:{required:!1,tsType:{name:`boolean`},description:`Whether to hide required indicator from label`}},composes:[`AriaTextFieldProps`,`Pick`]};var b={title:`Base/Input`,component:y,tags:[`autodocs`],argTypes:{size:{control:`select`,options:[`sm`,`md`]},label:{control:`text`},hint:{control:`text`},placeholder:{control:`text`},isDisabled:{control:`boolean`},isInvalid:{control:`boolean`},isRequired:{control:`boolean`},tooltip:{control:`text`}},args:{placeholder:`olivia@untitledui.com`,size:`sm`},decorators:[e=>(0,h.jsx)(`div`,{style:{width:`320px`},children:(0,h.jsx)(e,{})})]},x={args:{label:`Email`}},S={args:{label:`Email`,hint:`This is a hint text to help the user.`}},C={args:{label:`Email`,isInvalid:!0,hint:`Please enter a valid email.`}},w={args:{label:`Email`,tooltip:`We'll never share your email.`}},T={args:{label:`Search`,placeholder:`Search...`,shortcut:`⌘K`}},E={args:{label:`Email`,isRequired:!0}},D={args:{label:`Email`,isDisabled:!0}},O={args:{label:`Email`,size:`md`}};x.parameters={...x.parameters,docs:{...x.parameters?.docs,source:{originalSource:`{
+  args: {
+    label: "Email"
+  }
+}`,...x.parameters?.docs?.source}}},S.parameters={...S.parameters,docs:{...S.parameters?.docs,source:{originalSource:`{
+  args: {
+    label: "Email",
+    hint: "This is a hint text to help the user."
+  }
+}`,...S.parameters?.docs?.source}}},C.parameters={...C.parameters,docs:{...C.parameters?.docs,source:{originalSource:`{
+  args: {
+    label: "Email",
+    isInvalid: true,
+    hint: "Please enter a valid email."
+  }
+}`,...C.parameters?.docs?.source}}},w.parameters={...w.parameters,docs:{...w.parameters?.docs,source:{originalSource:`{
+  args: {
+    label: "Email",
+    tooltip: "We'll never share your email."
+  }
+}`,...w.parameters?.docs?.source}}},T.parameters={...T.parameters,docs:{...T.parameters?.docs,source:{originalSource:`{
+  args: {
+    label: "Search",
+    placeholder: "Search...",
+    shortcut: "⌘K"
+  }
+}`,...T.parameters?.docs?.source}}},E.parameters={...E.parameters,docs:{...E.parameters?.docs,source:{originalSource:`{
+  args: {
+    label: "Email",
+    isRequired: true
+  }
+}`,...E.parameters?.docs?.source}}},D.parameters={...D.parameters,docs:{...D.parameters?.docs,source:{originalSource:`{
+  args: {
+    label: "Email",
+    isDisabled: true
+  }
+}`,...D.parameters?.docs?.source}}},O.parameters={...O.parameters,docs:{...O.parameters?.docs,source:{originalSource:`{
+  args: {
+    label: "Email",
+    size: "md"
+  }
+}`,...O.parameters?.docs?.source}}};var k=[`Default`,`WithHint`,`Invalid`,`WithTooltip`,`WithShortcut`,`Required`,`Disabled`,`MediumSize`];export{x as Default,D as Disabled,C as Invalid,O as MediumSize,E as Required,S as WithHint,T as WithShortcut,w as WithTooltip,k as __namedExportsOrder,b as default};

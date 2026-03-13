@@ -1,0 +1,26 @@
+import{s as e}from"./iframe-Ba5HxN0B.js";import{t}from"./jsx-runtime-D1h9fths.js";import{t as n}from"./react-DMg-8qcY.js";import"./react-dom-DeXBWSIc.js";import{t as r}from"./cx-DD3W-KYS.js";import"./tooltip-Dbm3s6PK.js";import{i,n as a,r as o,t as s}from"./label-WflXO1O7.js";e(n(),1);var c=t(),l=e=>`url(data:image/svg+xml;base64,${btoa(`<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 2L2 10" stroke="${e}" stroke-linecap="round"/><path d="M11 7L7 11" stroke="${e}" stroke-linecap="round"/></svg>`)})`,u=({className:e,...t})=>(0,c.jsx)(i,{...t,style:{"--resize-handle-bg":l(`#D5D7DA`),"--resize-handle-bg-dark":l(`#373A41`)},className:t=>r(`w-full scroll-py-3 rounded-lg bg-primary px-3.5 py-3 text-md text-primary shadow-xs ring-1 ring-primary transition duration-100 ease-linear ring-inset placeholder:text-placeholder autofill:rounded-lg autofill:text-primary focus:outline-hidden`,`[&::-webkit-resizer]:bg-(image:--resize-handle-bg) [&::-webkit-resizer]:bg-contain dark:[&::-webkit-resizer]:bg-(image:--resize-handle-bg-dark)`,t.isFocused&&!t.isDisabled&&`ring-2 ring-brand`,t.isDisabled&&`cursor-not-allowed bg-disabled_subtle text-disabled ring-disabled`,t.isInvalid&&`ring-error_subtle`,t.isInvalid&&t.isFocused&&`ring-2 ring-error`,typeof e==`function`?e(t):e)});u.displayName=`TextAreaBase`;var d=({label:e,hint:t,tooltip:n,textAreaRef:i,hideRequiredIndicator:l,textAreaClassName:d,placeholder:f,className:p,rows:m,cols:h,...g})=>(0,c.jsx)(o,{...g,className:e=>r(`group flex h-max w-full flex-col items-start justify-start gap-1.5`,typeof p==`function`?p(e):p),children:({isInvalid:r,isRequired:o})=>(0,c.jsxs)(c.Fragment,{children:[e&&(0,c.jsx)(s,{isRequired:l?!l:o,tooltip:n,children:e}),(0,c.jsx)(u,{placeholder:f,className:d,ref:i,rows:m,cols:h}),t&&(0,c.jsx)(a,{isInvalid:r,children:t})]})});d.displayName=`TextArea`,u.__docgenInfo={description:``,methods:[],displayName:`TextAreaBase`,props:{ref:{required:!1,tsType:{name:`Ref`,elements:[{name:`HTMLTextAreaElement`}],raw:`Ref<HTMLTextAreaElement>`},description:``}},composes:[`AriaTextAreaProps`]},d.__docgenInfo={description:``,methods:[],displayName:`TextArea`,props:{label:{required:!1,tsType:{name:`string`},description:`Label text for the textarea`},hint:{required:!1,tsType:{name:`ReactNode`},description:`Helper text displayed below the textarea`},tooltip:{required:!1,tsType:{name:`string`},description:`Tooltip message displayed after the label.`},textAreaClassName:{required:!1,tsType:{name:`TextAreaBaseProps["className"]`,raw:`TextAreaBaseProps["className"]`},description:`Class name for the textarea wrapper`},ref:{required:!1,tsType:{name:`Ref`,elements:[{name:`HTMLDivElement`}],raw:`Ref<HTMLDivElement>`},description:`Ref for the textarea wrapper`},textAreaRef:{required:!1,tsType:{name:`TextAreaBaseProps["ref"]`,raw:`TextAreaBaseProps["ref"]`},description:`Ref for the textarea`},hideRequiredIndicator:{required:!1,tsType:{name:`boolean`},description:`Whether to hide required indicator from label.`},placeholder:{required:!1,tsType:{name:`string`},description:`Placeholder text.`},rows:{required:!1,tsType:{name:`number`},description:`Visible height of textarea in rows .`},cols:{required:!1,tsType:{name:`number`},description:`Visible width of textarea in columns.`}},composes:[`AriaTextFieldProps`]};var f={title:`Base/Textarea`,component:d,tags:[`autodocs`],argTypes:{label:{control:`text`},hint:{control:`text`},placeholder:{control:`text`},isDisabled:{control:`boolean`},isInvalid:{control:`boolean`},isRequired:{control:`boolean`},rows:{control:{type:`number`,min:2,max:10}}},args:{placeholder:`Enter a description...`,rows:4},decorators:[e=>(0,c.jsx)(`div`,{style:{width:`400px`},children:(0,c.jsx)(e,{})})]},p={args:{label:`Description`}},m={args:{label:`Bio`,hint:`Write a few sentences about yourself.`}},h={args:{label:`Comment`,isInvalid:!0,hint:`Comment is required.`}},g={args:{label:`Message`,isRequired:!0}},_={args:{label:`Notes`,isDisabled:!0}};p.parameters={...p.parameters,docs:{...p.parameters?.docs,source:{originalSource:`{
+  args: {
+    label: "Description"
+  }
+}`,...p.parameters?.docs?.source}}},m.parameters={...m.parameters,docs:{...m.parameters?.docs,source:{originalSource:`{
+  args: {
+    label: "Bio",
+    hint: "Write a few sentences about yourself."
+  }
+}`,...m.parameters?.docs?.source}}},h.parameters={...h.parameters,docs:{...h.parameters?.docs,source:{originalSource:`{
+  args: {
+    label: "Comment",
+    isInvalid: true,
+    hint: "Comment is required."
+  }
+}`,...h.parameters?.docs?.source}}},g.parameters={...g.parameters,docs:{...g.parameters?.docs,source:{originalSource:`{
+  args: {
+    label: "Message",
+    isRequired: true
+  }
+}`,...g.parameters?.docs?.source}}},_.parameters={..._.parameters,docs:{..._.parameters?.docs,source:{originalSource:`{
+  args: {
+    label: "Notes",
+    isDisabled: true
+  }
+}`,..._.parameters?.docs?.source}}};var v=[`Default`,`WithHint`,`Invalid`,`Required`,`Disabled`];export{p as Default,_ as Disabled,h as Invalid,g as Required,m as WithHint,v as __namedExportsOrder,f as default};
