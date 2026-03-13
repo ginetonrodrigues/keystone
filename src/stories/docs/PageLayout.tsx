@@ -1,5 +1,45 @@
 import type { ReactNode } from "react";
+import { useState, useCallback } from "react";
 import { useT } from "./i18n";
+
+export const CopyButton = ({
+  text,
+  label,
+}: {
+  text: string;
+  label?: string;
+}) => {
+  const [copied, setCopied] = useState(false);
+  const copy = useCallback(async () => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      setCopied(false);
+    }
+  }, [text]);
+  return (
+    <button
+      type="button"
+      onClick={copy}
+      style={{
+        marginLeft: "6px",
+        padding: "2px 8px",
+        fontSize: "11px",
+        fontWeight: 500,
+        color: copied ? "#067647" : "#535862",
+        background: copied ? "#ecfdf3" : "#f9fafb",
+        border: "1px solid #e5e7eb",
+        borderRadius: "6px",
+        cursor: "pointer",
+        fontFamily: FONT_BODY,
+      }}
+    >
+      {copied ? (label ? `${label} ✓` : "Copiado!") : label ?? "Copiar"}
+    </button>
+  );
+};
 
 const FONT_DISPLAY = "'Plus Jakarta Sans', -apple-system, sans-serif";
 const FONT_BODY = "'Inter', -apple-system, sans-serif";
