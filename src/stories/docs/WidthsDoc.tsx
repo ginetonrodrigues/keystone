@@ -2,7 +2,6 @@ import { DocPage, PageHeader, PageFooter } from "./PageLayout";
 import { useT } from "./i18n";
 import { getWidthsTokens } from "./tokensData";
 
-const FONT_DISPLAY = "'Plus Jakarta Sans', -apple-system, sans-serif";
 const FONT_BODY = "'Inter', -apple-system, sans-serif";
 
 const cellStyle: React.CSSProperties = {
@@ -23,7 +22,7 @@ export const WidthsDoc = () => {
       <PageHeader
         breadcrumb={t("widthsBreadcrumb")}
         title={t("widthsTitle")}
-        description={t("widthsDesc")}
+        description={t("widthsFoundationsDesc")}
         resources={false}
       />
       <p

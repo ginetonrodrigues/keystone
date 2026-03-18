@@ -1,4 +1,3 @@
-import React from "react";
 import { useT } from "./i18n";
 
 const FONT_DISPLAY = "'Plus Jakarta Sans', -apple-system, sans-serif";
@@ -16,28 +15,7 @@ interface ColorScale {
   swatches: ColorSwatch[];
 }
 
-const ContrastBadge = ({ ratio, level }: { ratio: string; level: "AAA" | "AA" }) => (
-  <span
-    style={{
-      display: "inline-flex",
-      alignItems: "center",
-      gap: "2px",
-      padding: "1px 6px",
-      borderRadius: "4px",
-      fontSize: "10px",
-      fontWeight: 600,
-      lineHeight: "16px",
-      backgroundColor: level === "AAA" ? "#ecfdf3" : "#fffaeb",
-      color: level === "AAA" ? "#067647" : "#b54708",
-      border: `1px solid ${level === "AAA" ? "#abefc6" : "#fedf89"}`,
-    }}
-  >
-    {level} {ratio}
-  </span>
-);
-
 const SwatchRow = ({ scale, description }: { scale: ColorScale; description?: string }) => {
-  const darkThreshold = 5;
   return (
     <div style={{ marginBottom: "32px" }}>
       <div style={{ marginBottom: "8px" }}>
@@ -50,7 +28,6 @@ const SwatchRow = ({ scale, description }: { scale: ColorScale; description?: st
       </div>
       <div style={{ display: "flex", gap: "4px", marginTop: "12px" }}>
         {scale.swatches.map((swatch, i) => {
-          const isLight = i < darkThreshold;
           return (
             <div key={swatch.step} style={{ flex: 1, minWidth: 0 }}>
               <div

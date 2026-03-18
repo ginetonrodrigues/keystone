@@ -2,7 +2,6 @@ import { DocPage, PageHeader, PageFooter } from "./PageLayout";
 import { useT } from "./i18n";
 import { getContainersTokens } from "./tokensData";
 
-const FONT_DISPLAY = "'Plus Jakarta Sans', -apple-system, sans-serif";
 const FONT_BODY = "'Inter', -apple-system, sans-serif";
 
 const cellStyle: React.CSSProperties = {
@@ -23,7 +22,7 @@ export const ContainersDoc = () => {
       <PageHeader
         breadcrumb={t("containersBreadcrumb")}
         title={t("containersTitle")}
-        description={t("containersDesc")}
+        description={t("containersFoundationsDesc")}
         resources={false}
       />
       <p

@@ -60,7 +60,8 @@ export function getPrimitivesColors(): Record<string, Record<string, string>> {
     if (!group || typeof group !== "object") continue;
     const entries: Record<string, string> = {};
     for (const [key, node] of Object.entries(group as Json)) {
-      if (node?.$value && typeof node.$value === "string") entries[key] = node.$value;
+      const value = (node as Json)?.$value;
+      if (typeof value === "string") entries[key] = value;
     }
     if (Object.keys(entries).length) out[cat] = entries;
   }
@@ -73,7 +74,8 @@ export function getPrimitivesSize(): Record<string, number> {
   const size = style.Size ?? {};
   const out: Record<string, number> = {};
   for (const [key, node] of Object.entries(size as Json)) {
-    if (node?.$value != null && typeof node.$value === "number") out[key] = node.$value;
+    const value = (node as Json)?.$value;
+    if (typeof value === "number") out[key] = value;
   }
   return out;
 }

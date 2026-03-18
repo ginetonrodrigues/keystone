@@ -2,7 +2,6 @@ import { DocPage, PageHeader, PageFooter } from "./PageLayout";
 import { useT } from "./i18n";
 import { getSpacingTokens } from "./tokensData";
 
-const FONT_DISPLAY = "'Plus Jakarta Sans', -apple-system, sans-serif";
 const FONT_BODY = "'Inter', -apple-system, sans-serif";
 
 const cellStyle: React.CSSProperties = {

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, type ReactNode } from "react";
+import { createContext, useContext, type ReactNode } from "react";
 
 export type Locale = "pt" | "es" | "en";
 
@@ -388,9 +388,9 @@ const translations = {
   colorModesDark: { pt: "Dark mode", es: "Modo oscuro", en: "Dark mode" },
 
   // Radius (Foundations)
-  radiusTitle: { pt: "Radius", es: "Radius", en: "Radius" },
+  radiusFoundationsTitle: { pt: "Radius", es: "Radius", en: "Radius" },
   radiusBreadcrumb: { pt: "Fundamentos -> Radius", es: "Fundamentos -> Radius", en: "Foundations -> Radius" },
-  radiusDesc: { pt: "Tokens de raio de borda. Referenciam Size.", es: "Tokens de radio de borde.", en: "Border radius tokens. They reference Size." },
+  radiusFoundationsDesc: { pt: "Tokens de raio de borda. Referenciam Size.", es: "Tokens de radio de borde.", en: "Border radius tokens. They reference Size." },
   radiusIntro: { pt: "Bloco \"2. Radius\" do keystone-variables.json.", es: "Bloque \"2. Radius\" del JSON.", en: "From \"2. Radius\" in keystone-variables.json." },
 
   // Spacing (Foundations)
@@ -402,13 +402,13 @@ const translations = {
   // Widths (Foundations)
   widthsTitle: { pt: "Widths", es: "Widths", en: "Widths" },
   widthsBreadcrumb: { pt: "Fundamentos -> Widths", es: "Fundamentos -> Widths", en: "Foundations -> Widths" },
-  widthsDesc: { pt: "Tokens de largura. Referenciam Size.", es: "Tokens de ancho.", en: "Width tokens. They reference Size." },
+  widthsFoundationsDesc: { pt: "Tokens de largura. Referenciam Size.", es: "Tokens de ancho.", en: "Width tokens. They reference Size." },
   widthsIntro: { pt: "Bloco \"4. Widths\" do keystone-variables.json.", es: "Bloque \"4. Widths\" del JSON.", en: "From \"4. Widths\" in keystone-variables.json." },
 
   // Containers (Foundations)
   containersTitle: { pt: "Containers", es: "Containers", en: "Containers" },
   containersBreadcrumb: { pt: "Fundamentos -> Containers", es: "Fundamentos -> Containers", en: "Foundations -> Containers" },
-  containersDesc: { pt: "Tokens de container (padding e max-width). Referenciam Size.", es: "Tokens de contenedor.", en: "Container tokens (padding and max-width). They reference Size." },
+  containersFoundationsDesc: { pt: "Tokens de container (padding e max-width). Referenciam Size.", es: "Tokens de contenedor.", en: "Container tokens (padding and max-width). They reference Size." },
   containersIntro: { pt: "Bloco \"5. Containers\" do keystone-variables.json.", es: "Bloque \"5. Containers\" del JSON.", en: "From \"5. Containers\" in keystone-variables.json." },
 
   // Icons

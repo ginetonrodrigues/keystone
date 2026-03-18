@@ -2,7 +2,6 @@ import { DocPage, PageHeader, PageFooter } from "./PageLayout";
 import { useT } from "./i18n";
 import { getRadiusTokens } from "./tokensData";
 
-const FONT_DISPLAY = "'Plus Jakarta Sans', -apple-system, sans-serif";
 const FONT_BODY = "'Inter', -apple-system, sans-serif";
 
 const cellStyle: React.CSSProperties = {
@@ -22,8 +21,8 @@ export const RadiusDoc = () => {
     <DocPage>
       <PageHeader
         breadcrumb={t("radiusBreadcrumb")}
-        title={t("radiusTitle")}
-        description={t("radiusDesc")}
+        title={t("radiusFoundationsTitle")}
+        description={t("radiusFoundationsDesc")}
         resources={false}
       />
       <p
