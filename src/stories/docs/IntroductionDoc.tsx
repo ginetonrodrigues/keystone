@@ -22,7 +22,7 @@ export const IntroductionDoc = () => {
       <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#181d27", margin: "0 0 8px 0", fontFamily: FONT_DISPLAY }}>{t("introConsumeManualTitle")}</h3>
       <p style={{ fontSize: "14px", color: "#535862", lineHeight: "24px", margin: "0 0 16px 0", fontFamily: FONT_BODY }}>{t("introConsumeManualBody")}</p>
       <p style={{ fontSize: "13px", color: "#717680", margin: "0 0 32px 0", fontFamily: FONT_BODY }}>
-        <strong>{t("navSectionClonar")}</strong> → {t("clonarTokensTitle")} · {t("clonarEstilosTitle")} · {t("clonarCompTitle")}
+        <strong>{t("navSectionClonar")}</strong> → _Primitives, Collections, Effects Styles, Icons, Typography · <strong>Components</strong> → Avatar, Badge, Button, …
       </p>
 
       <h2 style={{ fontSize: "22px", fontWeight: 600, color: "#181d27", margin: "0 0 12px 0", fontFamily: FONT_DISPLAY }}>{t("introOverviewTitle")}</h2>

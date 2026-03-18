@@ -107,9 +107,9 @@ const translations = {
   },
   clonarTokensReactTitle: { pt: "React", es: "React", en: "React" },
   clonarTokensReactBody: {
-    pt: "Fonte: src/styles/keystone-variables.json, theme-from-figma.css (gerado com npm run sync-tokens). Storybook → Foundations.",
-    es: "Fuente: src/styles/ y npm run sync-tokens. Storybook → Foundations.",
-    en: "Source: src/styles/keystone-variables.json, theme-from-figma.css (npm run sync-tokens). Storybook → Foundations.",
+    pt: "Fonte: src/styles/keystone-variables.json, theme-from-figma.css (npm run sync-tokens). Storybook → Clonar.",
+    es: "Fuente: src/styles/ y npm run sync-tokens. Storybook → Clonar.",
+    en: "Source: src/styles/keystone-variables.json, theme-from-figma.css (npm run sync-tokens). Storybook → Clonar.",
   },
   clonarTokensFlutterTitle: { pt: "Flutter (em breve)", es: "Flutter (próximamente)", en: "Flutter (coming soon)" },
   clonarTokensFlutterBody: {
@@ -437,42 +437,6 @@ const translations = {
     en: "Semantic and primitive colors come from Figma (sync-tokens). Spacing, radius, and shadows are defined in theme.css.",
   },
 
-  // Figma Sync doc
-  figmaSyncTitle: { pt: "Sincronização Figma", es: "Sincronización Figma", en: "Figma Sync" },
-  figmaSyncBreadcrumb: {
-    pt: "Fundamentos -> Sincronização Figma",
-    es: "Fundamentos -> Sincronización Figma",
-    en: "Foundations -> Figma Sync",
-  },
-  figmaSyncDesc: {
-    pt: "Fluxo para manter os tokens do design system alinhados ao arquivo Figma Keystone 2.0.",
-    es: "Flujo para mantener los tokens del sistema de diseño alineados con el archivo Figma Keystone 2.0.",
-    en: "How to keep design system tokens in sync with the Figma file Keystone 2.0.",
-  },
-  figmaSyncStep1Title: { pt: "1. Exportar variáveis do Figma", es: "1. Exportar variables de Figma", en: "1. Export variables from Figma" },
-  figmaSyncStep1Body: {
-    pt: "No Figma, abra o arquivo Keystone 2.0, vá em variáveis locais e exporte o JSON (ou use o plugin de variáveis). Salve como src/styles/keystone-variables.json.",
-    es: "En Figma, abra el archivo Keystone 2.0, vaya a variables locales y exporte el JSON. Guarde como src/styles/keystone-variables.json.",
-    en: "In Figma, open the Keystone 2.0 file, go to local variables and export the JSON. Save as src/styles/keystone-variables.json.",
-  },
-  figmaSyncStep2Title: { pt: "2. Rodar o script de sync", es: "2. Ejecutar el script de sync", en: "2. Run the sync script" },
-  figmaSyncStep2Body: {
-    pt: "No terminal: npm run sync-tokens. O script lê o JSON, resolve referências (ex.: {Colors.Gray (light mode).900}) e gera src/styles/theme-from-figma.css com @theme e .dark-mode.",
-    es: "En la terminal: npm run sync-tokens. El script lee el JSON, resuelve referencias y genera src/styles/theme-from-figma.css.",
-    en: "Run: npm run sync-tokens. The script reads the JSON, resolves references (e.g. {Colors.Gray (light mode).900}) and outputs src/styles/theme-from-figma.css with @theme and .dark-mode.",
-  },
-  figmaSyncStep3Title: { pt: "3. Uso no projeto", es: "3. Uso en el proyecto", en: "3. Usage in the project" },
-  figmaSyncStep3Body: {
-    pt: "O globals.css já importa theme-from-figma.css após theme.css, então os valores do Figma sobrescrevem o tema base. O Storybook reflete esses tokens nas páginas de Color Tokens e nos componentes.",
-    es: "globals.css ya importa theme-from-figma.css después de theme.css; los valores de Figma sobrescriben el tema base. Storybook refleja estos tokens en Color Tokens y en los componentes.",
-    en: "globals.css already imports theme-from-figma.css after theme.css, so Figma values override the base theme. Storybook reflects these tokens on the Color Tokens page and in components.",
-  },
-  figmaSyncSeeAlso: {
-    pt: "Ver também:",
-    es: "Ver también:",
-    en: "See also:",
-  },
-
   // Primitives (Foundations)
   primitivesTitle: { pt: "Primitivos", es: "Primitivos", en: "Primitives" },
   primitivesBreadcrumb: {
@@ -540,7 +504,11 @@ const translations = {
 
   // Icons
   iconsTitle: { pt: "Ícones", es: "Iconos", en: "Icons" },
-  iconsBreadcrumb: { pt: "Fundamentos -> Ícones", es: "Fundamentos -> Iconos", en: "Foundations -> Icons" },
+  iconsBreadcrumb: {
+    pt: "Clonar -> Collections -> Ícones",
+    es: "Clonar -> Collections -> Iconos",
+    en: "Clone -> Collections -> Icons",
+  },
   iconsDesc: {
     pt: "Biblioteca de ícones Untitled UI. Use tamanho e cor consistentes com o design system.",
     es: "Biblioteca de iconos Untitled UI. Use tamaño y color consistentes con el sistema de diseño.",
@@ -561,7 +529,11 @@ const translations = {
 
   // Typography
   typographyTitle: { pt: "Tipografia", es: "Tipografía", en: "Typography" },
-  typographyBreadcrumb: { pt: "Fundamentos -> Tipografia", es: "Fundamentos -> Tipografía", en: "Foundations -> Typography" },
+  typographyBreadcrumb: {
+    pt: "Clonar -> Collections -> Tipografia",
+    es: "Clonar -> Collections -> Tipografía",
+    en: "Clone -> Collections -> Typography",
+  },
   typographyDesc: {
     pt: "Nosso design system utiliza uma escala tipográfica abrangente para garantir legibilidade em todos os dispositivos. Ele fornece padrões tipográficos consistentes para títulos, corpo de texto e texto fino, e é projetado para ser acessível para todos.",
     es: "Nuestro sistema de diseño utiliza una escala tipográfica integral para garantizar legibilidad en todos los dispositivos. Proporciona patrones tipográficos consistentes para títulos, cuerpo de texto y texto fino, y está diseñado para ser accesible para todos.",
