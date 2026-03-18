@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "./theme.css";
+@import "./theme-from-figma.css";
 @import "./typography.css";
 
 @plugin "@tailwindcss/typography";
