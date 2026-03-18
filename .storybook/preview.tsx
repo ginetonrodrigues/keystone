@@ -47,15 +47,28 @@ const preview: Preview = {
     options: {
       storySort: {
         order: [
+          "Skill",
+          ["Copiar prompt", "Baixar Skill (.md)"],
+          "Clonar / Instalação Manual",
+          ["Tokens", "Estilos e Tema", "Componentes"],
           "Getting Started",
           ["Introduction", "Changelog"],
           "Foundations",
           [
+            "Primitives",
+            "Color Modes",
+            "Color Tokens",
             "Design Tokens",
             "Colors",
             "Typography",
+            "Spacing",
+            "Radius",
+            "Widths",
+            "Containers",
             "Spacing, Radius & Grids",
             "Effect Styles",
+            "Icons",
+            "Figma Sync",
           ],
           "*",
         ],

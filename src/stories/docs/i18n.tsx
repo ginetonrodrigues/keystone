@@ -26,6 +26,133 @@ const translations = {
     en: "© 2026 KOIN • KEYSTONE",
   },
   variables: { pt: "Variáveis", es: "Variables", en: "Variables" },
+  copyBtn: { pt: "Copiar", es: "Copiar", en: "Copy" },
+  copySuccess: { pt: "Copiado!", es: "¡Copiado!", en: "Copied!" },
+  navSectionSkill: { pt: "Skill", es: "Skill", en: "Skill" },
+  navSectionClonar: {
+    pt: "Clonar / Instalação Manual",
+    es: "Clonar / Instalación manual",
+    en: "Clone / Manual install",
+  },
+  clonarPreferSkill: {
+    pt: "Caminho recomendado: Skill → Copiar prompt na sidebar (adoção guiada, menos divergência).",
+    es: "Recomendado: Skill → Copiar prompt en la barra lateral.",
+    en: "Recommended: Skill → Copy prompt in the sidebar for guided adoption.",
+  },
+
+  introConsumeTitle: {
+    pt: "Como consumir o Design System",
+    es: "Cómo consumir el Design System",
+    en: "How to consume the Design System",
+  },
+  introConsumeSkillTitle: { pt: "Skill (recomendado)", es: "Skill (recomendado)", en: "Skill (recommended)" },
+  introConsumeSkillBody: {
+    pt: "Consumo guiado: prompt pronto para a IA e guideline .md — menos setup manual e maior consistência.",
+    es: "Consumo guiado: prompt listo para la IA y guideline .md.",
+    en: "Guided consumption: AI-ready prompt and .md guideline — less manual setup, more consistency.",
+  },
+  introConsumeManualTitle: { pt: "Clonar / instalação manual", es: "Clonar / instalación manual", en: "Clone / manual install" },
+  introConsumeManualBody: {
+    pt: "Tokens, tema e componentes direto no repositório — mais controle, maior risco de divergência.",
+    es: "Tokens, tema y componentes directamente en el repositorio.",
+    en: "Tokens, theme, and components directly from the repo — more control, higher drift risk.",
+  },
+
+  skillCopyBreadcrumb: { pt: "Skill", es: "Skill", en: "Skill" },
+  skillCopyTitle: { pt: "Copiar prompt da Skill", es: "Copiar prompt de Skill", en: "Copy Skill prompt" },
+  skillCopyDesc: {
+    pt: "Cole no Cursor (ou outra IDE) para alinhar tokens e componentes oficiais.",
+    es: "Pégalo en Cursor u otra IDE.",
+    en: "Paste in Cursor or another IDE to align with official tokens and components.",
+  },
+  skillCopyBody: {
+    pt: "O texto abaixo é carregado de public/keystone-skill-prompt.txt (ou do bloco entre comentários no .md).",
+    es: "El texto se carga desde public/keystone-skill-prompt.txt.",
+    en: "Loaded from public/keystone-skill-prompt.txt (or marked block in the .md file).",
+  },
+  skillLoading: { pt: "Carregando…", es: "Cargando…", en: "Loading…" },
+  skillCopyMissing: {
+    pt: "Não foi possível carregar o prompt. Verifique se public/keystone-skill-prompt.txt existe e tem conteúdo.",
+    es: "No se pudo cargar el prompt. Comprueba public/keystone-skill-prompt.txt.",
+    en: "Could not load the prompt. Ensure public/keystone-skill-prompt.txt exists and has content.",
+  },
+  skillPromptLabel: { pt: "Prompt", es: "Prompt", en: "Prompt" },
+  skillCopyBtn: { pt: "Copiar tudo", es: "Copiar todo", en: "Copy all" },
+
+  skillDownloadBreadcrumb: { pt: "Skill", es: "Skill", en: "Skill" },
+  skillDownloadTitle: { pt: "Baixar Skill (.md)", es: "Descargar Skill (.md)", en: "Download Skill (.md)" },
+  skillDownloadDesc: {
+    pt: "Guideline executável para Cursor ou outra IDE.",
+    es: "Guía ejecutable para Cursor u otra IDE.",
+    en: "Executable guideline for Cursor or another IDE.",
+  },
+  skillDownloadBody: {
+    pt: "O arquivo public/keystone-skill.md contém tokens, regras de componentes, boas práticas e restrições.",
+    es: "public/keystone-skill.md incluye tokens, reglas y restricciones.",
+    en: "public/keystone-skill.md includes tokens, component rules, practices, and restrictions.",
+  },
+  skillDownloadHint: { pt: "Baixar arquivo", es: "Descargar archivo", en: "Download file" },
+  skillDownloadLink: { pt: "keystone-skill.md", es: "keystone-skill.md", en: "keystone-skill.md" },
+
+  clonarManualWarning: {
+    pt: "Flutter: documentação e pacotes serão adicionados em breve. React: use este repositório como fonte.",
+    es: "Flutter: próximamente. React: usa este repositorio.",
+    en: "Flutter: docs/packages coming soon. React: use this repo as source.",
+  },
+  clonarTokensTitle: { pt: "Tokens", es: "Tokens", en: "Tokens" },
+  clonarTokensDesc: {
+    pt: "Primitivos e semânticos; estrutura preparada para React e Flutter.",
+    es: "Primitivos y semánticos; preparado para React y Flutter.",
+    en: "Primitive and semantic; structured for React and Flutter.",
+  },
+  clonarTokensReactTitle: { pt: "React", es: "React", en: "React" },
+  clonarTokensReactBody: {
+    pt: "Fonte: src/styles/keystone-variables.json, theme-from-figma.css (gerado com npm run sync-tokens). Storybook → Foundations.",
+    es: "Fuente: src/styles/ y npm run sync-tokens. Storybook → Foundations.",
+    en: "Source: src/styles/keystone-variables.json, theme-from-figma.css (npm run sync-tokens). Storybook → Foundations.",
+  },
+  clonarTokensFlutterTitle: { pt: "Flutter (em breve)", es: "Flutter (próximamente)", en: "Flutter (coming soon)" },
+  clonarTokensFlutterBody: {
+    pt: "Pacotes por categoria (cores, espaçamento, etc.) serão publicados aqui.",
+    es: "Paquetes por categoría se publicarán aquí.",
+    en: "Per-category packages will be published here.",
+  },
+  clonarEstilosTitle: { pt: "Estilos e Tema", es: "Estilos y tema", en: "Styles & theme" },
+  clonarEstilosDesc: {
+    pt: "Tema light/dark plugável.",
+    es: "Tema claro/oscuro enchufable.",
+    en: "Pluggable light/dark theme.",
+  },
+  clonarEstilosReactTitle: { pt: "React", es: "React", en: "React" },
+  clonarEstilosReactBody: {
+    pt: "globals.css importa theme.css e theme-from-figma.css. Classe .dark-mode para modo escuro.",
+    es: "globals.css importa los temas; .dark-mode para oscuro.",
+    en: "globals.css imports theme.css and theme-from-figma.css; .dark-mode for dark.",
+  },
+  clonarEstilosFlutterTitle: { pt: "Flutter (em breve)", es: "Flutter (próximamente)", en: "Flutter (coming soon)" },
+  clonarEstilosFlutterBody: {
+    pt: "ThemeData / ColorScheme alinhados ao DS serão documentados aqui.",
+    es: "ThemeData documentado aquí próximamente.",
+    en: "ThemeData aligned to DS will be documented here.",
+  },
+  clonarCompTitle: { pt: "Componentes", es: "Componentes", en: "Components" },
+  clonarCompDesc: {
+    pt: "Biblioteca por stack.",
+    es: "Biblioteca por stack.",
+    en: "Library per stack.",
+  },
+  clonarCompReactTitle: { pt: "React", es: "React", en: "React" },
+  clonarCompReactBody: {
+    pt: "Componentes em src/components/. Clone o repositório ou copie por pasta. Storybook lista os exemplos.",
+    es: "src/components/. Clona o copia por carpeta.",
+    en: "Under src/components/. Clone the repo or copy by folder; Storybook lists examples.",
+  },
+  clonarCompFlutterTitle: { pt: "Flutter (em breve)", es: "Flutter (próximamente)", en: "Flutter (coming soon)" },
+  clonarCompFlutterBody: {
+    pt: "Widgets do DS serão versionados em pacote dedicado.",
+    es: "Widgets en paquete dedicado.",
+    en: "Widgets will ship in a dedicated package.",
+  },
 
   // Introduction
   introWelcome: {

@@ -13,6 +13,18 @@ export const IntroductionDoc = () => {
         {t("introWelcome").replace(/\*\*(.*?)\*\*/g, "$1").replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")}
       </p>
 
+      <h2 style={{ fontSize: "22px", fontWeight: 600, color: "#181d27", margin: "0 0 12px 0", fontFamily: FONT_DISPLAY }}>{t("introConsumeTitle")}</h2>
+      <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#181d27", margin: "0 0 8px 0", fontFamily: FONT_DISPLAY }}>{t("introConsumeSkillTitle")}</h3>
+      <p style={{ fontSize: "14px", color: "#535862", lineHeight: "24px", margin: "0 0 16px 0", fontFamily: FONT_BODY }}>{t("introConsumeSkillBody")}</p>
+      <p style={{ fontSize: "13px", color: "#717680", margin: "0 0 24px 0", fontFamily: FONT_BODY }}>
+        <strong>{t("navSectionSkill")}</strong> → {t("skillCopyTitle")} · {t("skillDownloadTitle")}
+      </p>
+      <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#181d27", margin: "0 0 8px 0", fontFamily: FONT_DISPLAY }}>{t("introConsumeManualTitle")}</h3>
+      <p style={{ fontSize: "14px", color: "#535862", lineHeight: "24px", margin: "0 0 16px 0", fontFamily: FONT_BODY }}>{t("introConsumeManualBody")}</p>
+      <p style={{ fontSize: "13px", color: "#717680", margin: "0 0 32px 0", fontFamily: FONT_BODY }}>
+        <strong>{t("navSectionClonar")}</strong> → {t("clonarTokensTitle")} · {t("clonarEstilosTitle")} · {t("clonarCompTitle")}
+      </p>
+
       <h2 style={{ fontSize: "22px", fontWeight: 600, color: "#181d27", margin: "0 0 12px 0", fontFamily: FONT_DISPLAY }}>{t("introOverviewTitle")}</h2>
       <p style={{ fontSize: "14px", color: "#535862", lineHeight: "24px", margin: "0 0 32px 0", fontFamily: FONT_BODY }}>
         {t("introOverview")}

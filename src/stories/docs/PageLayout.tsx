@@ -5,9 +5,11 @@ import { useT } from "./i18n";
 export const CopyButton = ({
   text,
   label,
+  copiedLabel,
 }: {
   text: string;
   label?: string;
+  copiedLabel?: string;
 }) => {
   const [copied, setCopied] = useState(false);
   const copy = useCallback(async () => {
@@ -36,7 +38,7 @@ export const CopyButton = ({
         fontFamily: FONT_BODY,
       }}
     >
-      {copied ? (label ? `${label} ✓` : "Copiado!") : label ?? "Copiar"}
+      {copied ? (copiedLabel ?? (label ? `${label} ✓` : "Copiado!")) : label ?? "Copiar"}
     </button>
   );
 };

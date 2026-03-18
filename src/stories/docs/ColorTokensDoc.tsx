@@ -174,7 +174,7 @@ const TokenTable = ({
             <td style={{ ...cellStyle, fontWeight: 500, color: "#181d27" }}>
               <span style={{ display: "inline-flex", alignItems: "center", gap: 4 }}>
                 --{r.token}
-                <CopyButton text={`var(--${r.token})`} />
+                <CopyButton text={`var(--${r.token})`} label={t("copyBtn")} copiedLabel={t("copySuccess")} />
               </span>
             </td>
             <td style={cellStyle}>
