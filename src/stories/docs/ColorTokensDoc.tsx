@@ -144,7 +144,15 @@ const cellStyle: React.CSSProperties = {
   fontFamily: FONT_BODY,
 };
 
-const TokenTable = ({ rows, title }: { rows: TokenRow[]; title: string }) => (
+const TokenTable = ({
+  rows,
+  title,
+  previewLabel,
+}: {
+  rows: TokenRow[];
+  title: string;
+  previewLabel: string;
+}) => (
   <div style={{ marginBottom: "32px" }}>
     <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#181d27", margin: "0 0 12px 0", fontFamily: FONT_DISPLAY }}>
       {title}
@@ -154,6 +162,9 @@ const TokenTable = ({ rows, title }: { rows: TokenRow[]; title: string }) => (
         <tr>
           <th style={{ ...cellStyle, textAlign: "left", fontWeight: 500, color: "#98a2b3" }}>Token</th>
           <th style={{ ...cellStyle, textAlign: "left", fontWeight: 500, color: "#98a2b3" }}>Referência (primitiva)</th>
+          <th style={{ ...cellStyle, width: "72px", textAlign: "center", fontWeight: 500, color: "#98a2b3" }}>
+            {previewLabel}
+          </th>
           <th style={{ ...cellStyle, width: "80px" }} />
         </tr>
       </thead>
@@ -168,6 +179,18 @@ const TokenTable = ({ rows, title }: { rows: TokenRow[]; title: string }) => (
             </td>
             <td style={cellStyle}>
               {r.ref.startsWith("rgb") ? r.ref : `var(--${r.ref})`}
+            </td>
+            <td style={{ ...cellStyle, padding: "6px 12px", verticalAlign: "middle" }}>
+              <div
+                style={{
+                  width: "32px",
+                  height: "24px",
+                  borderRadius: "4px",
+                  border: "1px solid rgba(0,0,0,0.08)",
+                  background: `var(--${r.token})`,
+                }}
+                title={`var(--${r.token})`}
+              />
             </td>
             <td style={cellStyle} />
           </tr>
@@ -188,6 +211,20 @@ export const ColorTokensDoc = () => {
         description={t("ctDesc")}
         resources={false}
       />
+
+      <div
+        style={{
+          background: "var(--color-bg-brand-primary)",
+          border: "1px solid var(--color-border-brand)",
+          borderRadius: "12px",
+          padding: "20px 24px",
+          marginBottom: "16px",
+        }}
+      >
+        <p style={{ fontSize: "13px", color: "var(--color-text-brand-primary)", margin: "0 0 8px 0", lineHeight: "20px", fontFamily: FONT_BODY }}>
+          {t("ctFigmaSyncCallout")}
+        </p>
+      </div>
 
       <div
         style={{
@@ -221,11 +258,11 @@ export const ColorTokensDoc = () => {
         {t("ctHowItWorks")}
       </p>
 
-      <TokenTable rows={TEXT_TOKENS} title={t("ctTextColors")} />
-      <TokenTable rows={BG_TOKENS} title={t("ctBgColors")} />
-      <TokenTable rows={BORDER_TOKENS} title={t("ctBorderColors")} />
-      <TokenTable rows={FG_TOKENS} title={t("ctFgColors")} />
-      <TokenTable rows={COMPONENT_TOKENS} title={t("ctComponentColors")} />
+      <TokenTable rows={TEXT_TOKENS} title={t("ctTextColors")} previewLabel={t("ctPreview")} />
+      <TokenTable rows={BG_TOKENS} title={t("ctBgColors")} previewLabel={t("ctPreview")} />
+      <TokenTable rows={BORDER_TOKENS} title={t("ctBorderColors")} previewLabel={t("ctPreview")} />
+      <TokenTable rows={FG_TOKENS} title={t("ctFgColors")} previewLabel={t("ctPreview")} />
+      <TokenTable rows={COMPONENT_TOKENS} title={t("ctComponentColors")} previewLabel={t("ctPreview")} />
 
       <div style={{ marginTop: "24px", padding: "16px", background: "#f9fafb", borderRadius: "8px", border: "1px solid #e9eaeb" }}>
         <p style={{ fontSize: "12px", color: "#535862", margin: 0, lineHeight: "18px", fontFamily: FONT_BODY }}>

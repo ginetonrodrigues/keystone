@@ -22,6 +22,10 @@ const config: StorybookConfig = {
       styles: path.resolve(__dirname, "../src/styles"),
       "@": path.resolve(__dirname, "../src"),
     };
+    // GitHub Pages serve em /keystone/; em local fica na raiz
+    if (process.env.GITHUB_ACTIONS) {
+      config.base = "/keystone/";
+    }
     return config;
   },
   docs: {},

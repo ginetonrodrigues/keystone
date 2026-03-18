@@ -1,6 +1,6 @@
 import { DocPage, PageHeader, PageFooter } from "./PageLayout";
 import { useT } from "./i18n";
-import { getSpacingTokens } from "./tokensData";
+import { getWidthsTokens } from "./tokensData";
 
 const FONT_DISPLAY = "'Plus Jakarta Sans', -apple-system, sans-serif";
 const FONT_BODY = "'Inter', -apple-system, sans-serif";
@@ -14,16 +14,16 @@ const cellStyle: React.CSSProperties = {
   fontFamily: FONT_BODY,
 };
 
-export const SpacingDoc = () => {
+export const WidthsDoc = () => {
   const t = useT();
-  const tokens = getSpacingTokens();
+  const tokens = getWidthsTokens();
 
   return (
     <DocPage>
       <PageHeader
-        breadcrumb={t("spacingFoundationsBreadcrumb")}
-        title={t("spacingFoundationsTitle")}
-        description={t("spacingFoundationsDesc")}
+        breadcrumb={t("widthsBreadcrumb")}
+        title={t("widthsTitle")}
+        description={t("widthsDesc")}
         resources={false}
       />
       <p
@@ -35,7 +35,7 @@ export const SpacingDoc = () => {
           fontFamily: FONT_BODY,
         }}
       >
-        {t("spacingFoundationsIntro")}
+        {t("widthsIntro")}
       </p>
       <table style={{ width: "100%", borderCollapse: "collapse" }}>
         <thead>
@@ -53,11 +53,11 @@ export const SpacingDoc = () => {
               <td style={cellStyle}>
                 <div
                   style={{
-                    height: "8px",
-                    width: `${Math.min((value / 96) * 200, 200)}px`,
-                    maxWidth: "200px",
+                    height: "6px",
+                    width: `${Math.min((value / 1920) * 100, 100)}%`,
+                    maxWidth: "400px",
                     backgroundColor: "var(--color-fg-brand-primary)",
-                    borderRadius: "2px",
+                    borderRadius: "3px",
                   }}
                 />
               </td>

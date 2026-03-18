@@ -90,6 +90,21 @@ export const DesignTokensDoc = () => {
         resources={false}
       />
 
+      <div
+        style={{
+          marginTop: "24px",
+          padding: "16px 20px",
+          background: "var(--color-bg-secondary)",
+          borderRadius: "12px",
+          border: "1px solid var(--color-border-secondary)",
+          marginBottom: "32px",
+        }}
+      >
+        <p style={{ fontSize: "13px", color: "var(--color-text-secondary)", margin: 0, lineHeight: "20px", fontFamily: FONT_BODY }}>
+          {t("dtFigmaSyncCallout")}
+        </p>
+      </div>
+
       {/* Spacing Overview */}
       <div style={{ marginTop: "48px" }}>
         <h2 style={{ fontSize: "18px", fontWeight: 600, color: "#181d27", margin: "0 0 8px 0", fontFamily: FONT_DISPLAY }}>

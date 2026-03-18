@@ -296,6 +296,120 @@ const translations = {
     es: "El tema también expone alias (--text-color-*, --background-color-*, etc.) que apuntan a estos tokens.",
     en: "The theme also exposes aliases (--text-color-*, --background-color-*, etc.) that point to these tokens.",
   },
+  ctFigmaSyncCallout: {
+    pt: "Estes tokens são sincronizados a partir do Figma (Keystone 2.0). O arquivo keystone-variables.json é exportado do Figma e o comando npm run sync-tokens gera theme-from-figma.css. Assim, as cores exibidas aqui refletem a fonte de verdade do design.",
+    es: "Estos tokens se sincronizan desde Figma (Keystone 2.0). El archivo keystone-variables.json se exporta de Figma y el comando npm run sync-tokens genera theme-from-figma.css. Así, los colores mostrados aquí reflejan la fuente de verdad del diseño.",
+    en: "These tokens are synced from Figma (Keystone 2.0). The keystone-variables.json file is exported from Figma and npm run sync-tokens generates theme-from-figma.css. The colors shown here reflect the design source of truth.",
+  },
+  ctPreview: { pt: "Preview", es: "Vista previa", en: "Preview" },
+
+  // Design Tokens - Figma note
+  dtFigmaSyncCallout: {
+    pt: "Cores semânticas e primitivas vêm do Figma (sync-tokens). Espaçamento, radius e sombras estão definidos em theme.css.",
+    es: "Los colores semánticos y primitivos vienen de Figma (sync-tokens). Espaciado, radius y sombras están definidos en theme.css.",
+    en: "Semantic and primitive colors come from Figma (sync-tokens). Spacing, radius, and shadows are defined in theme.css.",
+  },
+
+  // Figma Sync doc
+  figmaSyncTitle: { pt: "Sincronização Figma", es: "Sincronización Figma", en: "Figma Sync" },
+  figmaSyncBreadcrumb: {
+    pt: "Fundamentos -> Sincronização Figma",
+    es: "Fundamentos -> Sincronización Figma",
+    en: "Foundations -> Figma Sync",
+  },
+  figmaSyncDesc: {
+    pt: "Fluxo para manter os tokens do design system alinhados ao arquivo Figma Keystone 2.0.",
+    es: "Flujo para mantener los tokens del sistema de diseño alineados con el archivo Figma Keystone 2.0.",
+    en: "How to keep design system tokens in sync with the Figma file Keystone 2.0.",
+  },
+  figmaSyncStep1Title: { pt: "1. Exportar variáveis do Figma", es: "1. Exportar variables de Figma", en: "1. Export variables from Figma" },
+  figmaSyncStep1Body: {
+    pt: "No Figma, abra o arquivo Keystone 2.0, vá em variáveis locais e exporte o JSON (ou use o plugin de variáveis). Salve como src/styles/keystone-variables.json.",
+    es: "En Figma, abra el archivo Keystone 2.0, vaya a variables locales y exporte el JSON. Guarde como src/styles/keystone-variables.json.",
+    en: "In Figma, open the Keystone 2.0 file, go to local variables and export the JSON. Save as src/styles/keystone-variables.json.",
+  },
+  figmaSyncStep2Title: { pt: "2. Rodar o script de sync", es: "2. Ejecutar el script de sync", en: "2. Run the sync script" },
+  figmaSyncStep2Body: {
+    pt: "No terminal: npm run sync-tokens. O script lê o JSON, resolve referências (ex.: {Colors.Gray (light mode).900}) e gera src/styles/theme-from-figma.css com @theme e .dark-mode.",
+    es: "En la terminal: npm run sync-tokens. El script lee el JSON, resuelve referencias y genera src/styles/theme-from-figma.css.",
+    en: "Run: npm run sync-tokens. The script reads the JSON, resolves references (e.g. {Colors.Gray (light mode).900}) and outputs src/styles/theme-from-figma.css with @theme and .dark-mode.",
+  },
+  figmaSyncStep3Title: { pt: "3. Uso no projeto", es: "3. Uso en el proyecto", en: "3. Usage in the project" },
+  figmaSyncStep3Body: {
+    pt: "O globals.css já importa theme-from-figma.css após theme.css, então os valores do Figma sobrescrevem o tema base. O Storybook reflete esses tokens nas páginas de Color Tokens e nos componentes.",
+    es: "globals.css ya importa theme-from-figma.css después de theme.css; los valores de Figma sobrescriben el tema base. Storybook refleja estos tokens en Color Tokens y en los componentes.",
+    en: "globals.css already imports theme-from-figma.css after theme.css, so Figma values override the base theme. Storybook reflects these tokens on the Color Tokens page and in components.",
+  },
+  figmaSyncSeeAlso: {
+    pt: "Ver também:",
+    es: "Ver también:",
+    en: "See also:",
+  },
+
+  // Primitives (Foundations)
+  primitivesTitle: { pt: "Primitivos", es: "Primitivos", en: "Primitives" },
+  primitivesBreadcrumb: {
+    pt: "Fundamentos -> Primitivos",
+    es: "Fundamentos -> Primitivos",
+    en: "Foundations -> Primitives",
+  },
+  primitivesDesc: {
+    pt: "Tokens primitivos do Figma: cores (Base, Gray, Brand, etc.) e escala Size (espaçamento em px).",
+    es: "Tokens primitivos de Figma: colores y escala Size (espaciado en px).",
+    en: "Figma primitive tokens: colors (Base, Gray, Brand, etc.) and Size scale (spacing in px).",
+  },
+  primitivesIntro: {
+    pt: "Estes valores vêm do bloco _Primitives do keystone-variables.json. Os tokens de foundations (Color Modes, Radius, Spacing, Widths, Containers) referenciam estes primitivos.",
+    es: "Estos valores vienen del bloque _Primitives del keystone-variables.json.",
+    en: "These values come from the _Primitives block in keystone-variables.json. Foundation tokens (Color Modes, Radius, Spacing, etc.) reference these primitives.",
+  },
+  primitivesColorsTitle: { pt: "Cores", es: "Colores", en: "Colors" },
+  primitivesColorsDesc: { pt: "Paletas primitivas por categoria.", es: "Paletas primitivas por categoría.", en: "Primitive palettes by category." },
+  primitivesSizeTitle: { pt: "Size (espaçamento)", es: "Size (espaciado)", en: "Size (spacing)" },
+  primitivesSizeDesc: { pt: "Escala numérica em pixels usada por Radius, Spacing, Widths e Containers.", es: "Escala numérica en píxeles.", en: "Numeric scale in pixels used by Radius, Spacing, Widths and Containers." },
+
+  // Color Modes (Foundations)
+  colorModesTitle: { pt: "Color Modes", es: "Color Modes", en: "Color Modes" },
+  colorModesBreadcrumb: {
+    pt: "Fundamentos -> Color Modes",
+    es: "Fundamentos -> Color Modes",
+    en: "Foundations -> Color Modes",
+  },
+  colorModesDesc: {
+    pt: "Tokens semânticos de cor para Light mode e Dark mode. Consomem os primitivos.",
+    es: "Tokens semánticos de color para modo claro y oscuro.",
+    en: "Semantic color tokens for Light and Dark mode. They reference primitives.",
+  },
+  colorModesIntro: {
+    pt: "Valores do bloco \"1. Color modes\" do JSON. Cada token resolve para uma cor primitiva.",
+    es: "Valores del bloque \"1. Color modes\" del JSON.",
+    en: "Values from the \"1. Color modes\" block in the JSON. Each token resolves to a primitive color." },
+  colorModesLight: { pt: "Light mode", es: "Modo claro", en: "Light mode" },
+  colorModesDark: { pt: "Dark mode", es: "Modo oscuro", en: "Dark mode" },
+
+  // Radius (Foundations)
+  radiusTitle: { pt: "Radius", es: "Radius", en: "Radius" },
+  radiusBreadcrumb: { pt: "Fundamentos -> Radius", es: "Fundamentos -> Radius", en: "Foundations -> Radius" },
+  radiusDesc: { pt: "Tokens de raio de borda. Referenciam Size.", es: "Tokens de radio de borde.", en: "Border radius tokens. They reference Size." },
+  radiusIntro: { pt: "Bloco \"2. Radius\" do keystone-variables.json.", es: "Bloque \"2. Radius\" del JSON.", en: "From \"2. Radius\" in keystone-variables.json." },
+
+  // Spacing (Foundations)
+  spacingFoundationsTitle: { pt: "Spacing", es: "Spacing", en: "Spacing" },
+  spacingFoundationsBreadcrumb: { pt: "Fundamentos -> Spacing", es: "Fundamentos -> Spacing", en: "Foundations -> Spacing" },
+  spacingFoundationsDesc: { pt: "Tokens de espaçamento (gap). Referenciam Size.", es: "Tokens de espaciado (gap).", en: "Spacing (gap) tokens. They reference Size." },
+  spacingFoundationsIntro: { pt: "Bloco \"3. Spacing\" do keystone-variables.json.", es: "Bloque \"3. Spacing\" del JSON.", en: "From \"3. Spacing\" in keystone-variables.json." },
+
+  // Widths (Foundations)
+  widthsTitle: { pt: "Widths", es: "Widths", en: "Widths" },
+  widthsBreadcrumb: { pt: "Fundamentos -> Widths", es: "Fundamentos -> Widths", en: "Foundations -> Widths" },
+  widthsDesc: { pt: "Tokens de largura. Referenciam Size.", es: "Tokens de ancho.", en: "Width tokens. They reference Size." },
+  widthsIntro: { pt: "Bloco \"4. Widths\" do keystone-variables.json.", es: "Bloque \"4. Widths\" del JSON.", en: "From \"4. Widths\" in keystone-variables.json." },
+
+  // Containers (Foundations)
+  containersTitle: { pt: "Containers", es: "Containers", en: "Containers" },
+  containersBreadcrumb: { pt: "Fundamentos -> Containers", es: "Fundamentos -> Containers", en: "Foundations -> Containers" },
+  containersDesc: { pt: "Tokens de container (padding e max-width). Referenciam Size.", es: "Tokens de contenedor.", en: "Container tokens (padding and max-width). They reference Size." },
+  containersIntro: { pt: "Bloco \"5. Containers\" do keystone-variables.json.", es: "Bloque \"5. Containers\" del JSON.", en: "From \"5. Containers\" in keystone-variables.json." },
 
   // Icons
   iconsTitle: { pt: "Ícones", es: "Iconos", en: "Icons" },
